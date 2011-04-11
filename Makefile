@@ -1,10 +1,10 @@
 all: run
 
-run: app
-	./app
+run: echo_server
+	./echo_server
 
-app: app.8
+echo_%: echo_%.8
 	8l -o $@ $<
 
-app.8: app.go
+%.8: %.go
 	8g $<
